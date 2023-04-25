@@ -1,0 +1,9 @@
+# .gitignore
+.R
+.Rhistory
+*.Rproj.user/
+*.Rproj.user
+.Rproj.user
+.DS_Store
+README.Rmd
+processed_data/
