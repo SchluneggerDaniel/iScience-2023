@@ -46,15 +46,15 @@ Data Preprocessing Results:
 
 Figures Main Text:
 
-19. plot_LLhood.R
-20. plot_LLhood_vs_Stim.R
-21. plot_orthogonalPredictions.R
-22. plot_auditoryShift.R
+22. plot_LLhood.R
+23. plot_LLhood_vs_Stim.R
+24. plot_orthogonalPredictions.R
+25. plot_auditoryShift.R
 
 Supplemental Information:
 
-23. plot_accuracy.R
-24. plot_LLhood_Omega.R
-25. plot_GLM_absolute.R
-26. plot_GLM_coefficients.R
-27. plot_visualShift.R
+26. plot_accuracy.R
+27. plot_LLhood_Omega.R
+28. plot_GLM_absolute.R
+29. plot_GLM_coefficients.R
+30. plot_visualShift.R
