@@ -49,28 +49,31 @@ plot_LLhood_Omega <- df_Omega |>
                                 "Item Frequency" = "#440154FF",
                                 "Alternation Frequency" = "#FDE725FF")) +
   theme_classic() +
-  labs(title = "Timescale of integration",
-       subtitle = "Best fitting \U03C9 in difficult trials",
+  labs(title = "",
+       subtitle = "Best fitting timescale of integration",
        x = "\nModality",
        y = "\U03C9\n") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
         legend.position = "bottom",
         plot.subtitle = element_text(size=10),
-        axis.text = element_text(size = 8),
-        axis.title.y = element_text(size = 9),
+        axis.text.x = element_text(size = 8),
+        axis.text.y = element_text(size = 8),
+        axis.title.y = element_text(size = 9, family = ""),
         axis.title.x = element_text(size = 9))
 
+plot_LLhood_Omega
 
 ggsave(filename = "plot_bestOmega.png",
        plot = plot_LLhood_Omega,
        width = 18,
        height = 10,
-       path = "/Users/daniel.schlunegger/Dropbox/LaTeX/iScience-2023/Figures",
+       path = "/Users/daniel.schlunegger/Desktop/Figures_iScience/",
        dpi = 300,
        bg = "transparent",
        units = "cm")

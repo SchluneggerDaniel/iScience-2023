@@ -291,6 +291,7 @@ p1 <- p1 +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         plot.subtitle = element_text(size = 10),
         legend.title = element_text(size = 10),
@@ -385,6 +386,7 @@ p2 <- p2 +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         plot.subtitle = element_text(size = 10),
         legend.title = element_text(size = 10),
@@ -473,6 +475,7 @@ p3 <- p3 +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         plot.subtitle = element_text(size = 10),
         legend.title = element_text(size = 10),
@@ -561,6 +564,7 @@ p4 <- p4 +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         plot.subtitle = element_text(size = 10),
         legend.title = element_text(size = 10),
@@ -586,18 +590,15 @@ auditory_shift_Patchwork <-   ((p1 | p2) /
                                  plot_layout(design = layout_psychometricAuditory, 
                                              widths = c(1,1),
                                              guides = "collect")) +
-  plot_annotation(theme = theme(plot.background = element_rect(fill = "transparent", color = NA),
-                                panel.background = element_rect(fill = "transparent", color = NA)))
+  plot_annotation()
 
 
-auditory_shift_Patchwork
 
-
-ggsave(filename = "plot_auditoryShift.png", 
+ggsave(filename = "Figure5.tiff", 
        plot = auditory_shift_Patchwork, 
        width = 18, 
        height = 15, 
-       path = "/Users/daniel.schlunegger/Dropbox/LaTeX/iScience-2023/Figures",
+       path = "/Users/daniel.schlunegger/Desktop/Figures_iScience/",
        dpi = 300, 
        bg = "transparent", 
        units = "cm")

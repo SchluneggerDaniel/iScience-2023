@@ -30,13 +30,14 @@ plot_absoluteGLM <- dfabs_GLM |>
                                 "Alternation Frequency" = "#FDE725FF",
                                 "Repetition Preference" = "#ED6925FF")) +
   theme_classic() +
-  labs(title = "GLM (probit regression)",
-       subtitle = "stimulus + intensity × learning model",
+  labs(title = " ",
+       subtitle = "GLM: stimulus + intensity × learning model",
        x = "\nModality",
        y = "Nagelkerke\n") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -84,7 +85,7 @@ ggsave(filename = "plot_GLM_absolute.png",
        plot = plot_absoluteGLM,
        width = 18,
        height = 10,
-       path = "/Users/daniel.schlunegger/Dropbox/LaTeX/iScience-2023/Figures/",
+       path = "/Users/daniel.schlunegger/Desktop/Figures_iScience/",
        dpi = 300,
        bg = "transparent",
        units = "cm")

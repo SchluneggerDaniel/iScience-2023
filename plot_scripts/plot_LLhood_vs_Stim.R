@@ -43,15 +43,16 @@ p1_auditoryAbsolute <- dfabs_auditory |>
                                 "Alternation Frequency" = "#FDE725FF",
                                 "Stimulus-Only" = "#000000")) +
   theme_classic() +
-  labs(title = "Learning models vs stimulus-only model",
+  labs(title = " ",
        subtitle = "Auditory",
        x = " ",
-       y = "\nLog-Likelihood \ncentered") +
+       y = "\nlog-likelihood \ncentered") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
         legend.box.background = element_rect(fill = "transparent", color = NA),
         legend.key = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -124,6 +125,7 @@ p1_vestibularAbsolute <- dfabs_vestibular |>
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
         legend.key = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -179,6 +181,7 @@ p1_visualAbsolute <- dfabs_visual |>
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
         legend.key = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -231,17 +234,16 @@ p1_visualAbsolute <- p1_visualAbsolute +
 
 
 plot_LLhood_vs_Stim <- ((p1_auditoryAbsolute | p1_vestibularAbsolute | p1_visualAbsolute) +
-                          plot_layout(guides = "auto")) +
-  plot_annotation(theme = theme(plot.background = element_rect(fill = "transparent", color = NA),
-                                panel.background = element_rect(fill = "transparent", color = NA)))
+                          plot_layout(guides = "auto")) + 
+  plot_annotation()
 
 
-ggsave(filename = "plot_LLhood_vs_Stim.png",
+ggsave(filename = "Figure2.tiff",
        plot = plot_LLhood_vs_Stim,
        width = 18,
-       height = 9,
-       path = "/Users/daniel.schlunegger/Dropbox/LaTeX/iScience-2023/Figures",
+       height = 7,
+       path = "/Users/daniel.schlunegger/Desktop/Figures_iScience/",
        dpi = 300,
-       bg = "transparent",
+       bg = "white",
        units = "cm")
 

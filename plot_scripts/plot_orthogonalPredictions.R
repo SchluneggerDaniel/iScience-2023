@@ -137,18 +137,16 @@ plot_oP_auditoryIF <- plotdf_auditory_IF |> ggplot() +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
-        legend.text = element_text(size=8),
+        legend.text = element_text(size=8, family = ""),
         legend.position = "bottom",
         plot.subtitle = element_text(size=10),
         axis.text = element_text(size = 8),
         axis.title.y = element_text(size = 10),
         axis.title.x = element_text(size = 10),
         axis.title.y.right = element_text(angle = 90))
-
-
-
 
 
 ### === LOAD DATA === ###
@@ -206,12 +204,13 @@ plot_oP_quantify <- dfOrtho |>
   geom_hline(yintercept = 1, linetype = "dashed", linewidth = 0.2) +
   theme_classic() +
   labs(title = "B",
-       subtitle = "Quantifying orthogonal predictions between response-based and stimulus-based model",
+       subtitle = "Quantifying orthogonal predictions between response-based and stimulus-based models",
        x = "\n Modality",
        y = "Ratio\n") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -226,16 +225,15 @@ plot_oP_quantify <- dfOrtho |>
 # Patchwork
 plotOrtho <- (plot_oP_auditoryIF | plot_oP_quantify) +
   plot_layout(guides = "auto", nrow = 2)  +
-  plot_annotation(theme = theme(plot.background = element_rect(fill = "transparent", color = NA),
-                                panel.background = element_rect(fill = "transparent", color = NA))) 
+  plot_annotation()
 
 
-ggsave(filename = "plot_orthogonalPredictions.png",
+ggsave(filename = "Figure4.tiff",
        plot = plotOrtho,
        width = 18,
        height = 18,
-       path = "/Users/daniel.schlunegger/Dropbox/LaTeX/iScience-2023/Figures/",
+       path = "/Users/daniel.schlunegger/Desktop/Figures_iScience/",
        dpi = 300,
-       bg = "transparent",
+       bg = "white",
        units = "cm")
 

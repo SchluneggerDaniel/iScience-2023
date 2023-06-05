@@ -56,10 +56,11 @@ p1_auditoryDelta <- delta_LLhood_EvD_auditory |>
   labs(title = "A",
        subtitle = "Auditory",
        x = " ",
-       y = "\U0394 log-likelihood \n \U2190 Response-based is better \n Stimulus-based is better \U2192") +
+       y = "\U0394 log-likelihood \n <- Response-based is better \n Stimulus-based is better ->") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -68,7 +69,7 @@ p1_auditoryDelta <- delta_LLhood_EvD_auditory |>
         axis.text = element_text(size = 8),
         axis.title.y = element_text(size = 9),
         axis.title.x = element_text(size = 9))
-
+ 
 
 # Vestibular Plot
 p1_vestibularDelta <- delta_LLhood_EvD_vestibular |> 
@@ -96,6 +97,7 @@ p1_vestibularDelta <- delta_LLhood_EvD_vestibular |>
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -133,6 +135,7 @@ p1_visualDelta <- delta_LLhood_EvD_visual |>
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -190,6 +193,7 @@ p1_auditoryAbsolute <- dfabs_auditory |>
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -251,6 +255,7 @@ p1_vestibularAbsolute <- dfabs_vestibular |>
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -298,6 +303,7 @@ p1_visualAbsolute <- dfabs_visual |>
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -393,11 +399,12 @@ p1_auditoryOmega <- auditory_LearningModels |>
   theme_classic() +
   labs(title = "C",
        subtitle = " ",
-       x = bquote("\U03C9"["response"]),
+       x = bquote(italic(omega)["response"]),
        y = "log-likelihood") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -432,11 +439,12 @@ p1_vestibularOmega <- vestibular_LearningModels |>
   theme_classic() +
   labs(title = "",
        subtitle = " ",
-       x = bquote("\U03C9"["response"]),
+       x = bquote(italic(omega)["response"]),
        y = " ") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -472,11 +480,12 @@ p1_visualOmega <- visual_LearningModels |>
   theme_classic() +
   labs(title = "",
        subtitle = " ",
-       x = bquote("\U03C9"["response"]),
+       x = bquote(italic(omega)["response"]),
        y = " ") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
+        text = element_text(family = "Avenir"),
         plot.title = element_text(size=12, face = "bold"),
         legend.title = element_text(size=10),
         legend.text = element_text(size=8),
@@ -485,7 +494,6 @@ p1_visualOmega <- visual_LearningModels |>
         axis.text = element_text(size = 8),
         axis.title.y = element_text(size = 9),
         axis.title.x = element_text(size = 10))
-
 
 
 ### === PATCHWORK === ###
@@ -509,16 +517,15 @@ plot_LLhood<- ((p1_auditoryDelta | p1_vestibularDelta | p1_visualDelta) /
                  guide_area() +
                           plot_layout(design = layout_LLhood, 
                                       guides = "collect", nrow = 4, ncol = 3))  +
-  plot_annotation(theme = theme(plot.background = element_rect(fill = "transparent", color = NA),
-                                panel.background = element_rect(fill = "transparent", color = NA))) 
+  plot_annotation()
 
 
-ggsave(filename = "plot_LLhood.png",
+ggsave(filename = "Figure3.tiff",
        plot = plot_LLhood,
        width = 18,
        height = 22,
-       path = "/Users/daniel.schlunegger/Dropbox/LaTeX/iScience-2023/Figures",
+       path = "/Users/daniel.schlunegger/Desktop/Figures_iScience/",
        dpi = 300,
-       bg = "transparent",
+       bg = "white",
        units = "cm")
 
