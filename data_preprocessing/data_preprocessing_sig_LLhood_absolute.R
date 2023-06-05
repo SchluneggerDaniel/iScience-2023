@@ -354,8 +354,6 @@ absolute_LLhood_learningmodels[modality == "visual" & comparison == "IF vs AF"
               mu = 0, alternative = "two.sided")[[3]] |> round(6)
 
 
-# In order that the analysis is correct
-
 # Add Significance and p.symbol
 absolute_LLhood_learningmodels <- absolute_LLhood_learningmodels |> 
   mutate(Significance = ifelse(p.value < 0.05, yes = "Significant", "Non-Significant")) |> 
