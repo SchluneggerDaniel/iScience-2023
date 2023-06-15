@@ -3,7 +3,30 @@ iScience-2023
 
 This is the repository for the article: *Probabilistic integration of
 preceding responses explains response bias in perceputal decision
-making* by Schlunegger & Mast (2023) in *iScience* **(under review)**.
+making* by Schlunegger & Mast (2023) in *iScience*.
+
+<div style="text-align: center;">
+
+<img src="GA.jpg" alt="Graphical Abstract" width="500">
+
+</div>
+
+## Abstract
+
+Expectations of sensory information change not only how well but also
+what we perceive. Even in an unpredictable environment, the brain is by
+default constantly engaged in computing probabilities between sensory
+events. These estimates are used to generate predictions about future
+sensory events. Here, we investigated the predictability of behavioral
+responses using three different learning models in three different
+one-interval two-alternative forced choice experiments with either
+auditory, vestibular, or visual stimuli. Results show that recent
+decisions, instead of the sequence of generative stimuli, cause serial
+dependence. By bridging the gap between sequence learning and perceptual
+decision making, we provide a novel perspective on sequential choice
+effects. We propose that serial biases reflect the tracking of
+statistical regularities of the decision variable, offering a broader
+understanding of this phenomenon.
 
 ## Reproduce results and figures
 
