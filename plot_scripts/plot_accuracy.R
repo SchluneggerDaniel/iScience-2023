@@ -87,8 +87,8 @@ p2 <- dfplot_vestibular |>
   theme_classic() +
   labs(title = "B",
        subtitle = "Vestibular",
-       x = " ",
-       y = "Accuracy") +
+       x = "Stimulus intensity",
+       y = " ") +
   theme(panel.background = element_rect(fill = "transparent", color = NA),
         plot.background = element_rect(fill = "transparent", color = NA),
         legend.background = element_rect(fill = "transparent", color = NA),
