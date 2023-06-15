@@ -5,11 +5,7 @@ This is the repository for the article: *Probabilistic integration of
 preceding responses explains response bias in perceputal decision
 making* by Schlunegger & Mast (2023) in *iScience*.
 
-<div style="text-align: center;">
-
-<img src="GA.jpg" alt="Graphical Abstract" width="500">
-
-</div>
+![Graphical Abstract](GA.jpg)
 
 ## Abstract
 
